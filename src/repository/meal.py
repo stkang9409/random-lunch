@@ -1,0 +1,3 @@
+class MealRepo:
+    def get_all(self):
+        ...
