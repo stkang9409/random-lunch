@@ -3,7 +3,7 @@ from time import monotonic
 
 import pytest
 
-from src.main import group_random, get_friend_score, inc_friend_score, get_total_friend_score, \
+from src.group import group_random, get_friend_score, inc_friend_score, get_total_friend_score, \
     get_min_friend_score_team, group_random_v2
 
 

@@ -16,6 +16,20 @@ class TestDB:
         tmp = sorted([a, b])
         self.storage[tuple(tmp)] += 1
 
+class TestDB2:
+    def __init__(self):
+        self.storage = defaultdict(int)
+
+    def get(self, a, b):
+        pk = self.get_pk(a, b)
+        return self.storage[pk]
+
+    def increase(self, a, b):
+        pk = self.get_pk(a, b)
+        self.storage[pk] += 1
+
+    def get_pk(self, a, b):
+        return tuple(sorted([a.pk, b.pk]))
 
 def inc_friend_score(friends, *, db):
     combies = combinations(friends, 2)
