@@ -60,7 +60,7 @@ def group_random_v2(people: List, member_cnt, *, db) -> List:
     people_shuffled_list = [group_random(people, member_cnt) for _ in range(100)]
     return get_min_friend_score_team(db, *people_shuffled_list)
 
-
+# people이 들어있는 리스트를 섞는 함수
 def shuffle_list(people) -> List:
     people_shuffled = [*people]
     shuffle(people_shuffled)
